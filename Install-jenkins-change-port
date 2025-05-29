@@ -33,3 +33,14 @@ apt-get update
    33  cat This may also be found at: /var/l
    34  sudo systemctl status jenkins
    35  cat /var/lib/jenkins/secrets/initialAdminPassword
+
+
+
+
+######  Change port ######
+
+systemctl stop jenkins
+vi /lib/systemd/system/jenkins.service
+systemctl daemon-reload
+systemctl start jenkins
+systemctl status jenkins
