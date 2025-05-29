@@ -1,0 +1,8 @@
+Uninstall java in ubuntu machine
+
+   sudo update-alternatives --config java
+
+
+   #Java home path:       /usr/lib/jvm/java-21-openjdk-amd64/bin/
+
+   #Maven home path:      /usr/share/maven
