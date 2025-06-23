@@ -23,6 +23,10 @@ then apply it by executing :
 . ~/.bashrc
 
 Refrence: http://javedmandary.blogspot.com/2016/09/install-maven-339-on-ubuntu.html
+
+Uninstall maven:
+sudo apt remove maven
+
 ----------------------------------------------------------------------------------------
 
 Latest Jenkins installation steps:
