@@ -39,6 +39,18 @@ https://pkg.origin.jenkins.io/debian-stable/
 
 Install jenkins 
 -------------------
+#2025#: 
+sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]" \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins
+
+sudo systemctl enable jenkins
+sudo systemctl start jenkins
+sudo systemctl status jenkins
 
 To install Jenkins on Ubuntu, follow below set of commands:
 Latest jenkins
@@ -132,13 +144,15 @@ Install nexus
 ------------------
 
 1) sudo wget https://download.sonatype.com/nexus/3/latest-unix.tar.gz
-2) sudo tar -xvf latest-unix.tar.gz
+   https://sonatype-download.global.ssl.fastly.net/repository/downloads-prod-group/3/nexus-3.81.1-01-linux-x86_64.tar.gz
+2) sudo tar -xvf nexus-3.81.1-01-linux-x86_64.tar.gz
 3) mv nexus-3.46.0-01 /opt/
 4) mv sonatype-work/ /opt/
 5) cd /opt
 6) mv nexus-3.46.0-01/ nexus
 7) ###Create a user called Nexus####
      sudo adduser nexus
+  after adding it add password as nexus.
 
 8) Give permission to Nexus user
 sudo chown -R nexus:nexus /opt/nexus
