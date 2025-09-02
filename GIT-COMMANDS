@@ -7,7 +7,7 @@
 7.  i                   (instert mode to enter the content)
 8.  esc shift : wq      (To save the content inside the file)
 9.  esc shift : q!      (To unsave the changes inside the file)
-10. cat > file name     (To create the file)
+10. cat > file name     (To edit & modify the file)
 11. touch filename      (To create the file)
 12. nano filename       (To creat the file)
 13. cntrl x and y enter ( To save the content in the file)
